@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a111f",
+                        "accent-teal": "#2dd4bf",
+                        "background-light": "#F4F7F9",
+                        "background-dark": "#14171e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>PackMach - Pricing</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-4 md:px-20 lg:px-40 bg-white/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined text-xl">package_2</span>
+</div>
+<h2 class="font-display text-xl font-bold leading-tight tracking-tight">PackMach</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-primary text-sm font-medium hover:text-accent-teal transition-colors" href="#">Features</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">Pricing</a>
+<a class="text-primary text-sm font-medium hover:text-accent-teal transition-colors" href="#">About</a>
+</nav>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold hover:bg-slate-800 transition-all">
+<span>Log In</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-16 px-6">
+<!-- Hero Section -->
+<div class="max-w-4xl w-full text-center flex flex-col items-center gap-6 mb-16">
+<div class="inline-flex items-center rounded-full bg-accent-teal/10 px-4 py-1.5 border border-accent-teal/20">
+<span class="text-accent-teal text-sm font-bold tracking-wider uppercase">Pricing</span>
+</div>
+<h1 class="font-display text-4xl md:text-6xl font-black tracking-tight text-primary">Simple, transparent pricing</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed">
+                Start free, upgrade when you need more. No hidden fees, just simple tools for your logistics needs.
+            </p>
+</div>
+<!-- Pricing Cards Container -->
+<div class="max-w-[1000px] w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+<!-- Free Plan -->
+<div class="flex flex-col rounded-xl border border-primary/10 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+<div class="mb-8">
+<h3 class="font-display text-xl font-bold text-primary mb-4">Free</h3>
+<div class="flex items-baseline gap-1">
+<span class="font-display text-5xl font-black text-primary">€0</span>
+<span class="text-slate-500 font-medium">/month</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center rounded-full h-12 bg-primary text-white font-bold mb-8 hover:bg-slate-800 transition-all">
+                    Start Free
+                </button>
+<ul class="flex flex-col gap-4 flex-1">
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-slate-400 text-lg">check_circle</span>
+<span class="text-sm">5 generations</span>
+</li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-slate-400 text-lg">check_circle</span>
+<span class="text-sm">5 countries</span>
+</li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-slate-400 text-lg">check_circle</span>
+<span class="text-sm">Low-res download</span>
+</li>
+<li class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined text-slate-400 text-lg">check_circle</span>
+<span class="text-sm">All categories</span>
+</li>
+</ul>
+</div>
+<!-- Premium Plan -->
+<div class="relative flex flex-col rounded-xl border-2 border-accent-teal bg-primary p-8 shadow-2xl shadow-accent-teal/10 overflow-hidden">
+<div class="absolute top-4 right-4">
+<span class="bg-accent-teal text-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Most Popular</span>
+</div>
+<div class="mb-8">
+<h3 class="font-display text-xl font-bold text-white mb-4">Premium</h3>
+<div class="flex items-baseline gap-1 text-white">
+<span class="font-display text-5xl font-black">€29</span>
+<span class="text-slate-400 font-medium">/month</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center rounded-full h-12 bg-accent-teal text-primary font-bold mb-8 hover:brightness-110 transition-all">
+                    Go Premium
+                </button>
+<ul class="flex flex-col gap-4 flex-1">
+<li class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-accent-teal text-lg">check_circle</span>
+<span class="text-sm">Unlimited generations</span>
+</li>
+<li class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-accent-teal text-lg">check_circle</span>
+<span class="text-sm">20+ countries</span>
+</li>
+<li class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-accent-teal text-lg">check_circle</span>
+<span class="text-sm">Full HD download</span>
+</li>
+<li class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-accent-teal text-lg">check_circle</span>
+<span class="text-sm">View regulations</span>
+</li>
+<li class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-accent-teal text-lg">check_circle</span>
+<span class="text-sm">History</span>
+</li>
+<li class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-accent-teal text-lg">check_circle</span>
+<span class="text-sm">Priority queue</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="max-w-3xl w-full mt-24 mb-20">
+<h2 class="font-display text-3xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-xl border border-primary/10 overflow-hidden transition-all hover:border-accent-teal/30">
+<button class="w-full flex items-center justify-between p-6 text-left group">
+<span class="font-bold text-primary group-hover:text-accent-teal transition-colors">How does billing work?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+                        We offer flexible monthly billing. You'll be charged at the start of each cycle. You can upgrade, downgrade, or cancel your subscription at any time directly from your dashboard settings.
+                    </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-xl border border-primary/10 overflow-hidden transition-all hover:border-accent-teal/30">
+<button class="w-full flex items-center justify-between p-6 text-left group">
+<span class="font-bold text-primary group-hover:text-accent-teal transition-colors">Can I switch plans anytime?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+                        Yes! You can switch from Free to Premium at any time to unlock all features. Your new features will be available instantly upon successful payment.
+                    </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-xl border border-primary/10 overflow-hidden transition-all hover:border-accent-teal/30">
+<button class="w-full flex items-center justify-between p-6 text-left group">
+<span class="font-bold text-primary group-hover:text-accent-teal transition-colors">What happens if I cancel?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+                        If you cancel your Premium subscription, you will still have access to premium features until the end of your current billing period. After that, your account will revert to the Free plan.
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-primary/10 py-12 px-6">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 text-primary opacity-60">
+<span class="material-symbols-outlined">package_2</span>
+<span class="font-display font-bold">PackMach</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<div class="text-slate-400 text-xs">
+                © 2024 PackMach Inc. All rights reserved.
+            </div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PackMach Admin - User Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a111f",
+                        "accent": "#f97316",
+                        "background-light": "#f4f7f9",
+                        "background-dark": "#14171e",
+                        "neutral-light": "#eaecf1",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #f4f7f9;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-slate-900 font-body">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-40 bg-white border-b border-neutral-light px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-neutral-light transition-colors">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="font-display text-xl font-bold tracking-tight text-primary">PackMach</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">notifications</span>
+</button>
+<div class="size-10 rounded-full overflow-hidden border-2 border-accent">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a professional male administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKnZDLgknlibO_TGLeREz34q59NtQp-4ODp325OHEt8z7DGO0c52czBSQNX-wUtOheZEFj7yAqFWE82_XzxK2qLVTwPPsD6Y4YxD9mJTzMTWxUGOpHJgTgNa9_-HfkswWh812fiw3bAA7HxPl5x-9kz8lruTPiT2g112EqrfobyjDrZBv7WFPpl4lfd40JdjZCG_Cv6-gPFZCsHNFs-mNiDjvFAuSNPJJDGaf7ESLgs6QsTVD4-v6ddgfhZvKL7-CcNn3tx7mdBNA"/>
+</div>
+</div>
+</nav>
+<!-- Slide-out Drawer Overlay (Hidden by default in static mockup, but represented here as requested) -->
+<!-- To show/hide this, toggle the 'hidden' class and handle the transform -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden">
+<div class="absolute left-0 top-0 h-full w-4/5 max-w-xs bg-white shadow-2xl p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<p class="font-display text-2xl font-bold text-primary">Admin Menu</p>
+<button class="material-symbols-outlined text-slate-500">close</button>
+</div>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-4 p-4 rounded-xl bg-primary text-white">
+<span class="material-symbols-outlined">group</span>
+<span class="font-medium">User Management</span>
+</li>
+<li class="flex items-center gap-4 p-4 rounded-xl text-slate-600 hover:bg-neutral-light transition-colors">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</li>
+<li class="flex items-center gap-4 p-4 rounded-xl text-slate-600 hover:bg-neutral-light transition-colors">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-medium">Analytics</span>
+</li>
+<li class="flex items-center gap-4 p-4 rounded-xl text-slate-600 hover:bg-neutral-light transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Settings</span>
+</li>
+</ul>
+</div>
+</div>
+<main class="p-4 pb-24">
+<!-- KPI Metrics Grid -->
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-white p-5 rounded-xl border border-neutral-light shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-accent text-lg">groups</span>
+<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+12%</span>
+</div>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-wider">Total Users</p>
+<p class="font-display text-2xl font-bold text-primary">12,840</p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-neutral-light shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-accent text-lg">bolt</span>
+<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+5%</span>
+</div>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-wider">Active Today</p>
+<p class="font-display text-2xl font-bold text-primary">1,240</p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-neutral-light shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-accent text-lg">person_add</span>
+<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+8%</span>
+</div>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-wider">New Weekly</p>
+<p class="font-display text-2xl font-bold text-primary">450</p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-neutral-light shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-accent text-lg">stars</span>
+<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+15%</span>
+</div>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-wider">Premium</p>
+<p class="font-display text-2xl font-bold text-primary">3,120</p>
+</div>
+</div>
+<!-- Search and Filter -->
+<div class="flex gap-2 mb-6">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-white border border-neutral-light rounded-xl py-3 pl-10 pr-4 text-sm focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all" placeholder="Search users..." type="text"/>
+</div>
+<button class="bg-white border border-neutral-light rounded-xl px-4 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- User Cards List -->
+<div class="flex flex-col gap-4">
+<!-- User Card 1 -->
+<div class="bg-white rounded-xl border border-neutral-light p-4 shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<img alt="Sarah Connor" class="size-12 rounded-full object-cover" data-alt="Circle profile of a woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzEur6VxiRwkPWPnLODQ6X4Ro3FKc8ozci3IrP2Y75rxGu8gI3Cwp7B5UQtaE61s9C9uF3tqTiEvNh3QAzoTBzPGNbov0sfSrEr9mHVIxqtqaw5Y_IUM15kHGmDKehU9RVRSKatCAA-wN7-wRSPZz9JYe8aggKh5yQEQTtO1OsexmLCL9qC8pzR7S--HAzxNX8q2ZDKK4dgxHAlv9pXGop3cpnVHM661SA6ruZ7W_8cVRfEO5LnoTSXKvyaPGFyMFM2UzZeZxqoIs"/>
+<div>
+<h3 class="font-bold text-primary">Sarah Connor</h3>
+<p class="text-slate-500 text-xs truncate max-w-[150px]">sarah.c@techmail.com</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-100 text-orange-700">Premium</span>
+<span class="text-slate-400 text-xs">•</span>
+<span class="text-slate-500 text-xs">Joined Oct 12, 2023</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-[11px] font-medium text-slate-600">
+<span>Generations used</span>
+<span>840 / 1000</span>
+</div>
+<div class="w-full bg-neutral-light h-1.5 rounded-full overflow-hidden">
+<div class="bg-accent h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+</div>
+<!-- User Card 2 -->
+<div class="bg-white rounded-xl border border-neutral-light p-4 shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<img alt="Marcus Wright" class="size-12 rounded-full object-cover" data-alt="Portrait of a man with a professional look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMs93RO2DlG2bov-H9PN6R1f7rR56Hnl3f3ykBbi3RfAzCKZ9-zcT1ux88G0gbtbmJ5sI-RK61Y42nMJQvN17RvcDTAqYLZ_zzx0YL-GQA0Q2B0mbTLkHh893PWF0Ku0AhbLJRyET2WQZZzIOwsTXo49d9SZcfYhicvWpXAVnopC94g0o7_N_xpdNxd3T_vDsg7iK-IjryUkuR6DC1xIcaUKkkoAcMn4heRWWllkNgd7_xZpmiIIMCUA-rhmEfJAt9WRYIbu4KGgk"/>
+<div>
+<h3 class="font-bold text-primary">Marcus Wright</h3>
+<p class="text-slate-500 text-xs truncate max-w-[150px]">marcus.w@sky.net</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600">Free</span>
+<span class="text-slate-400 text-xs">•</span>
+<span class="text-slate-500 text-xs">Joined Nov 05, 2023</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-[11px] font-medium text-slate-600">
+<span>Generations used</span>
+<span>12 / 50</span>
+</div>
+<div class="w-full bg-neutral-light h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary/40 h-full rounded-full" style="width: 24%"></div>
+</div>
+</div>
+</div>
+<!-- User Card 3 -->
+<div class="bg-white rounded-xl border border-neutral-light p-4 shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<img alt="Elena Gilbert" class="size-12 rounded-full object-cover" data-alt="Professional woman portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWsEfNpxmfr_vteSRySsWnI9O94P01mpbqZnTp9_yIG4euKO_2pppBGncBokZXpiHpKHXB1fRII6tIDx1VLztMRAEOX5sHXbGHGHB2LBK-JAEQAlGqE53wYr43GUJPKEToSvhTY795A1sV77iVZiUAkb4J3dEKTJqmtlVVyt4IN1YR5sjj704l8nC0RhUs-GfIYKaaJdpfGPYHRJFeE-uphNcDEdL9qdJzEZ_m9dale0zkfBcVap1RP7n353Gl4F5Lxdy4ibqLgSw"/>
+<div>
+<h3 class="font-bold text-primary">Elena Gilbert</h3>
+<p class="text-slate-500 text-xs truncate max-w-[150px]">elena.g@mystic.com</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-100 text-orange-700">Premium</span>
+<span class="text-slate-400 text-xs">•</span>
+<span class="text-slate-500 text-xs">Joined Jan 20, 2024</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-[11px] font-medium text-slate-600">
+<span>Generations used</span>
+<span>950 / 1000</span>
+</div>
+<div class="w-full bg-neutral-light h-1.5 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+</div>
+<!-- User Card 4 -->
+<div class="bg-white rounded-xl border border-neutral-light p-4 shadow-sm relative overflow-hidden opacity-80 grayscale-[0.5]">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<img alt="John Smith" class="size-12 rounded-full object-cover" data-alt="Portrait of a generic man profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApnhFjYYBoVWL64mHFGNFDENakoT4PzLcexxs6mG-LEK6GDFqSzIOPGOiYk0TvZykeBJQhwIWqm3glJjqFsXOp7ZhG5OZ3Q2mowpPcv-opL08CUNzHuvNvbOOyHz1q0596o4DpGLBpm45UQ6zvX_E5lty510yQ3e1pp2KN9EadaMHHOeKpOZjol-aAOHDnl-bqlQNxDRaMKHHgYx2MmvqiIdNtTLcd3gBdOSiXWbvk7D-atrUsK8Ag1spzzWp2A0WGHgKPcAMUDzw"/>
+<div>
+<h3 class="font-bold text-primary">John Smith</h3>
+<p class="text-slate-500 text-xs truncate max-w-[150px]">john.s@oldmail.com</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700">Suspended</span>
+<span class="text-slate-400 text-xs">•</span>
+<span class="text-slate-500 text-xs">Joined Feb 15, 2023</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-[11px] font-medium text-slate-600">
+<span>Generations used</span>
+<span>0 / 0</span>
+</div>
+<div class="w-full bg-neutral-light h-1.5 rounded-full overflow-hidden">
+<div class="bg-slate-300 h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Mobile -->
+<div class="mt-8 flex items-center justify-between">
+<button class="flex items-center gap-1 text-slate-500 font-medium text-sm disabled:opacity-50">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+                Previous
+            </button>
+<span class="text-sm font-display font-medium text-primary">Page 1 of 42</span>
+<button class="flex items-center gap-1 text-accent font-medium text-sm">
+                Next
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation (Secondary Option mentioned in prompt, but slide-out is primary) -->
+<!-- Keeping a floating action button for quick adds or similar actions -->
+<div class="fixed bottom-6 right-6 z-40">
+<button class="size-14 rounded-full bg-accent text-white shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl font-bold">person_add</span>
+</button>
+</div>
+</body></html>

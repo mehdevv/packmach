@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A0F1E;
+  --color-accent-teal: #00D4AA;
+  --color-accent-orange: #FF6B35;
+  --color-background-light: #F4F7F9;
+  --color-background-dark: #0A0F1E;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    @apply bg-background-light text-slate-900 overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .teal-gradient-text {
+    background: linear-gradient(90deg, #00D4AA 0%, #00A383 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design Results - Step 4</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a111f",
+                        "accent": "#00D4AA",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#14171e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<button class="text-primary dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Results</h2>
+<div class="size-10"></div>
+</div>
+<div class="flex flex-col gap-2 px-6 pb-4">
+<div class="flex justify-between items-end">
+<p class="text-primary dark:text-slate-100 text-sm font-bold uppercase tracking-wider">Step 4: Final Results</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">4 of 4</p>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-accent rounded-full w-full"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-32">
+<div class="px-4 py-6">
+<h3 class="text-2xl font-bold leading-tight text-center mb-6">Generated Packaging Design</h3>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-xl mb-8 group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern premium box packaging design mockup with teal accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPglPbZJDNFU8rbqBcLdVCxU87bBY_8hN6Rp6r_0qB8XVCyKmIBpvCLbl7CFvOfxE6DqMDrc2dfrxABB7TE_ovMXmyJJs9m3-L8r2QEGf6C95HLN140mZpbU8QNqZBJE4ZSpC-tN_z8wFq76WgjI8rlf4cAVeILL-XUH8w8hwQemW6YZmL3MZEPXYK7_8pi2p-so_pE508JwfnH5PU_BCi28v8M9KYrMpVxNNlTJe2L-lu-XBn3yiYk0lL7RLPDeyVZ0zP42VUFEo");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary dark:text-accent">zoom_in</span>
+</button>
+</div>
+<section class="bg-white dark:bg-slate-900 rounded-xl p-6 mb-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-accent font-bold">verified</span>
+<h4 class="text-lg font-bold">Compliance Report</h4>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-400">FDA Labeling Requirements</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-400">Eco-friendly Material Standards</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-400">Barcode Readability Check</span>
+</li>
+</ul>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-xl p-6 mb-8 shadow-sm border border-slate-100 dark:border-slate-800">
+<h4 class="text-lg font-bold mb-3">Design Rationale</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    The design utilizes a minimalist aesthetic with high-contrast elements to ensure shelf visibility. The use of #00D4AA as an accent color communicates freshness and modernity, while the primary navy provides a premium, trustworthy base. Typography has been selected for maximum legibility at various distances.
+                </p>
+</section>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary dark:bg-accent py-4 rounded-xl text-white dark:text-primary font-bold flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined">download</span>
+                    Download Assets
+                </button>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-slate-200 dark:bg-slate-800 py-4 rounded-xl text-primary dark:text-slate-100 font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">refresh</span>
+                        Regenerate
+                    </button>
+<button class="bg-slate-200 dark:bg-slate-800 py-4 rounded-xl text-primary dark:text-slate-100 font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">share</span>
+                        Share
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-50">
+<div class="flex justify-around items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary dark:text-accent" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">bar_chart</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Usage</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

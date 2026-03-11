@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0A0F1E",
+                        "accent-teal": "#00D4AA",
+                        "accent-orange": "#FF6B35",
+                        "background-light": "#F4F7F9",
+                        "background-dark": "#0A0F1E",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "12px",
+                        "lg": "20px",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+        .teal-gradient-text {
+            background: linear-gradient(90deg, #00D4AA 0%, #00A383 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<div class="relative flex h-auto min-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 bg-white/80 dark:bg-primary/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-2 text-accent-teal">
+<span class="material-symbols-outlined text-3xl font-bold">package_2</span>
+<h2 class="text-primary dark:text-white text-2xl font-bold tracking-tight">PackMach</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-accent-teal transition-colors" href="#">Features</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-accent-teal transition-colors" href="#">Pricing</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-accent-teal transition-colors" href="#">Countries</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-700 dark:text-slate-200 text-sm font-bold">Login</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-10 px-5 bg-accent-teal text-primary text-sm font-bold hover:opacity-90 transition-opacity">
+<span>Start Free</span>
+</button>
+</div>
+</header>
+<section class="relative px-6 lg:px-20 py-16 lg:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 flex flex-col gap-8 text-left z-10">
+<h1 class="text-primary dark:text-white text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+                            Generate <span class="teal-gradient-text">Export-Ready</span> Packaging in Minutes
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg lg:text-xl max-w-xl leading-relaxed">
+                            AI-powered compliance and design for global exporters. Ensure your packaging meets international standards automatically without the legal headache.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-accent-teal text-primary text-base font-bold shadow-lg shadow-accent-teal/20 hover:scale-105 transition-transform">
+<span>Generate Free Packaging</span>
+</button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 border-2 border-slate-200 dark:border-slate-700 text-primary dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span>See How It Works</span>
+</button>
+</div>
+</div>
+<div class="flex-1 relative w-full flex justify-center lg:justify-end">
+<div class="relative w-full max-w-[500px] aspect-square bg-gradient-to-tr from-accent-teal/20 to-accent-orange/10 rounded-xl overflow-hidden shadow-2xl border border-white/20">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Olive oil glass bottle in premium packaging design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeDsNe6nTlJs2ugs2uxP9nvOIzzH0EQs3yYu0bDBlBaUScPqKOPWhUCUiy_q700NdsMBrRq79pF4X4Dn65o11efjm0TL-W8vFTecF13epLSqX2jIaw-p0GfhRgpn7uu-9FJw4LAbySycXDcYETR-rZ3MXEqzzLLHRgoXx2XAYWDhw4m2lgfCM1H5To_bT9LgLfvxdlECXHOLvbqCehZLg2yWAtuvPu6ZJsY32khWO-J-GfBfNJfTZohYk2R8j3SVTPit4mKlWj6oc');"></div>
+<div class="absolute top-6 left-6 bg-white/90 dark:bg-primary/90 backdrop-blur p-4 rounded-lg shadow-xl flex items-center gap-3 border border-accent-teal/30">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-teal">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Compliance Status</p>
+<p class="text-sm font-bold text-primary dark:text-white">EU Standards Met</p>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 bg-white dark:bg-primary p-5 rounded-lg shadow-2xl w-64">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-4 bg-blue-600 rounded-sm"></span>
+<span class="text-xs font-bold text-slate-400">Target: France</span>
+</div>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-accent-teal text-sm">check_circle</span> French Translation Added
+                                    </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-accent-teal text-sm">check_circle</span> Nutri-Score Included
+                                    </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-accent-teal text-sm">check_circle</span> Eco-Emballages Logo
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 lg:px-20 py-20 bg-slate-50 dark:bg-primary/40">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold text-primary dark:text-white mb-4">How It Works</h2>
+<div class="w-20 h-1 bg-accent-teal mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-6 p-8 rounded-lg bg-white dark:bg-primary border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal font-bold text-xl border border-accent-teal/20">
+                                01
+                            </div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary dark:text-white">
+<span class="material-symbols-outlined">edit_note</span>
+<h3 class="text-xl font-bold">Describe Product</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Input your product name, ingredients, dimensions, and unique selling points into our AI engine.</p>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-lg bg-white dark:bg-primary border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-accent-orange/10 flex items-center justify-center text-accent-orange font-bold text-xl border border-accent-orange/20">
+                                02
+                            </div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary dark:text-white">
+<span class="material-symbols-outlined">public</span>
+<h3 class="text-xl font-bold">Choose Country</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Select one or multiple target markets. Our AI instantly loads local regulations and language requirements.</p>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-lg bg-white dark:bg-primary border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal font-bold text-xl border border-accent-teal/20">
+                                03
+                            </div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary dark:text-white">
+<span class="material-symbols-outlined">inventory_2</span>
+<h3 class="text-xl font-bold">Get Packaging</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Download your print-ready files in high resolution with all required symbols and legal notices in place.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 lg:px-20 py-20 bg-white dark:bg-primary">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-3xl font-bold text-primary dark:text-white">Product Categories</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Tailored solutions for every industry sector.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<div class="group p-6 rounded-lg bg-background-light dark:bg-slate-900 border border-transparent hover:border-accent-teal transition-all text-center flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-primary flex items-center justify-center text-accent-teal shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<h4 class="text-sm font-bold text-primary dark:text-white">Food &amp; Beverage</h4>
+</div>
+<div class="group p-6 rounded-lg bg-background-light dark:bg-slate-900 border border-transparent hover:border-accent-teal transition-all text-center flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-primary flex items-center justify-center text-accent-teal shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">face_5</span>
+</div>
+<h4 class="text-sm font-bold text-primary dark:text-white">Cosmetics &amp; Beauty</h4>
+</div>
+<div class="group p-6 rounded-lg bg-background-light dark:bg-slate-900 border border-transparent hover:border-accent-teal transition-all text-center flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-primary flex items-center justify-center text-accent-teal shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">medication</span>
+</div>
+<h4 class="text-sm font-bold text-primary dark:text-white">Pharmaceuticals</h4>
+</div>
+<div class="group p-6 rounded-lg bg-background-light dark:bg-slate-900 border border-transparent hover:border-accent-teal transition-all text-center flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-primary flex items-center justify-center text-accent-teal shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">checkroom</span>
+</div>
+<h4 class="text-sm font-bold text-primary dark:text-white">Textile &amp; Clothing</h4>
+</div>
+<div class="group p-6 rounded-lg bg-background-light dark:bg-slate-900 border border-transparent hover:border-accent-teal transition-all text-center flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-primary flex items-center justify-center text-accent-teal shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">devices</span>
+</div>
+<h4 class="text-sm font-bold text-primary dark:text-white">Electronics</h4>
+</div>
+<div class="group p-6 rounded-lg bg-background-light dark:bg-slate-900 border border-transparent hover:border-accent-teal transition-all text-center flex flex-col items-center gap-4 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-primary flex items-center justify-center text-accent-teal shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+</div>
+<h4 class="text-sm font-bold text-primary dark:text-white">Artisanal Products</h4>
+</div>
+</div>
+</div>
+</section>
+<div class="w-full bg-slate-100 dark:bg-slate-900 py-6 overflow-hidden border-y border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-12 whitespace-nowrap animate-marquee">
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="France flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvsVGbiG1w-IMlpiloIJ7iI4nla7Yk-zYV1oKv54jAlDkwi4G-PrVqSnE9rYjIyz5yismbFhuqSZySFZ8mwG2yJ9YOI8soWKh97WJGfK4SHQlSNIaPBEbJAtIEOiUAJiJs93mN-y7bNFtY5xVAhL0yE1y7D-1shIIMMkpLLMeJX56BHr_ypVdZ1hWCrxylcuYmQodM-0UlYbTz5sCe-cxL1ZfxzWJxRmVb-STJR8duz2-agbPACsjAhiVwgbAlCyo6GMmnI4olE08"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">France</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="Germany flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKO5__eORSZl6YLsQFl4Fty-DiJ49fR3LKvCQ5xWI5BvbDKrx4Rk4jkh9CFfxuLwjGhVFW7zi35IIHkT9mw8ehgDvzlBrsNrPA3WfZB44HcJY3Z160RgVLGWQ8ogK5fKATSt2VPWhw6pHoIdnkAUrm9e3f0j3F1g3wq0N4Fu1LfJX98lDOmiDMEpswApCExHQclOdf5Z_Sz9PX52I5VqsxptqTovVSD4Jm4c4ykxXnFdm3VQcG1bt6sw5aK6hfJ7WJwqFGiXzBK_M"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">Germany</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="USA flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1IyA0Ub1ZO590TichGvodb12wvgRWhSy0rYfuzSdP8C68t5EIxJtWN9jqRTUU6OlSsfTj62HwHcbSy7-oUxtaEu5PYOPWZsQs9Dt0-EF7nZ3sx_EC3BOV_d5ElocRNU7v2cGFmIBtlycX3R8LcdUpBA7ul6w2VPreaRiXrcdtRkIiOfrzFsfuHDHclo5zTbuUNx4oe4-2Y9B7ztA5XDBFzaNq9INIEzxyCHba4lOjvnCmwaRCtI52vLZ3vTqb0TFbrDYHRWu7nBk"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">USA</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="Saudi Arabia flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNkZ4OT-ph6bB0sGSovusj7JAMb3oY7ntaaLgSdhsxgzy6JjfhZ-I-rumTszN3LSmyUkmLoJXcNstV_4eeJ4-a1D7ECtsIWi5H9Us5__ZSzGsA-yzAZ7pamojE4692RZdHAw9c0UTmjmncm6AJMvcNH4sQ_OHwIHxNewYuzLyL8Fk0iwhhrqEpdiKkN5t7B8JgN5qpsrziapBU5mRyGsIJwbSNExy-UauUsnfVMbz0rRvXjm15lrqtw6cChoJmXGW8Br7ebCKIJ7w"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">Saudi Arabia</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="UAE flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAPbI1LDhFeynWSrjaLe2WXWSUVl7FelLs73URWhpKoaPGXrfxyOYgmgTUkvbxKdpyi5urtzep4yWULFWTPulEWc4FdQo_H-457B9PA3yh-4bnBDLkteIjc7ycgjDUr5leeladFU0yoRSuVDlRD-bIXNr93kOUGTX6b73z-XIr1DicE3jWkvX1nZl8HXWKY1vCaIOZWVzvc30tk9vE08Z5xri2Drojfn7y9QA5lq75eOg7mlJOZq2nKEori4KRnwketOrqx3IFStA"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">UAE</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="China flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1hZWreiiekQthpofNqMfyBPIMLkCevPAL8Fzi1HH18GVWNeKEz3z40QQJ9_h4NKQjhq-2k9vbKmD5DFwhI867mmW51LAD8NzQoIp7e1Fj2CBH1soJm8uruDRYL1xRJPJSKnyFlzokJxQsbh_pYlc3RWnXupqOXReIz8oEQE-Mo0C-ZygJm8mbVlj9_d1Lf91BoS8mvs4oHbbeEpSvTT1OmNPVSIw04mDH5p304792qijVh1LDMvc-ZxseMbAYWUAqAv76d_zQLE0"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">China</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="UK flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSXydh7KV2ULcleTsjwuYIqbHZ7ynJ5TrYtz35F2B2C7CvpIzZphaD6cAjJfBhtwgSahghz6UuoyAkb_0sNo3KrFrm_o071RZtcT-W5HmXyA9TtjDxXpPRwPrpa9HCvG6TJgZAqAxHrMUrYj6Y1w4WghJ1RwvKRAWI_XCTbtY3B0jLJSVUEzhJUziojRxjz6_K1D_NGGEGu7aqAvsLVRPmuYpmzHGFLyB75gv3G2cULEjZU75x32AG0MZmIMAUpERUDVvPz7th8Ng"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">UK</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="Canada flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvRSQn37-K0IYrS6bw_YBhgrrx6ESPh9hZjqlEeOOwqf0GYoMX9Q7v5YZmB7GD1uqxLQMklDTnihvA1aFZ9EfI_wRoRFKUbuVRbcI1hNwBHHQkwXpKyXMCzNPh7AjiQF00vLB_tEonrz_KzJi4smrqWm61YBpdwPMMOJ3su_w0LA5CN_Kib_p9uKGHQinw_Fn62TypgWZVkmcQSV6VRSbCuEAWaRNTPclNspsnjzgQKFZLe_6xx9K2h3RguG7P4uOEhQk4lqNxRDA"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">Canada</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="Morocco flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWCbR4xNMYSDsm7GF7SrZWZZPgCQVOiHq25aPv1eaXlN-87n2E9ygtSCqTmrEhI55JUZLyIogFOaV0BW_ElUYa5UUk8DwF15peby88l2IsttDDA3JaNBMfzKKJKMx7YZvU6XNm0ConMaGy2VwUW4IGTzg475oh4kCe8JOe9JEaTQXGR-osKIoeQfiGkYB3tq7wd9QJvQzroJk0yklabIUCDTte8ZP1A48jsubjSa3sMT-CpYUELRXLNTCbY6qOkPALmeUVsxCcZAE"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">Morocco</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<img alt="" class="w-6 h-4 rounded-sm" data-alt="Tunisia flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKhy25EXg7wXilrHCuk5ikKku_A1g9b63LESfb44bGnIPhRhGOEQQaW0oesgU3gQkPBOm2FXM-HIW4chSp4VE9WAipo6LZ6mneV1gXmaUg2X-LQbGBPDKYbZJ1DmM-EDRLOJ3req3Re3b5OXU4qVTgKAhtGohj4HwxLDF_WMo1c4QzKQjPgO5zp5ukfeKSDuCroZl7Z3IGObUkLnAHFPRGv5B2iZ7kam1s1XtYhdc0gSL3Hq2BTKGopsx1_0pPTKznc3-k1_V05uc"/>
+<span class="text-slate-500 font-bold uppercase tracking-widest text-xs">Tunisia</span>
+</div>
+</div>
+</div>
+<section class="px-6 lg:px-20 py-24 bg-background-light dark:bg-primary/60">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-primary dark:text-white mb-4">Simple, Transparent Pricing</h2>
+<p class="text-slate-500">Everything you need to export globally.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-primary/40 border border-slate-200 dark:border-slate-800 p-10 rounded-lg flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h3 class="text-2xl font-bold text-primary dark:text-white">Free</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-primary dark:text-white">$0</span>
+<span class="text-slate-400">/mo</span>
+</div>
+<p class="text-slate-500 text-sm">Perfect for exploring our AI capabilities.</p>
+</div>
+<ul class="flex flex-col gap-4">
+<li class="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-accent-teal text-xl">check</span>
+                                    1 Product Design / mo
+                                </li>
+<li class="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-accent-teal text-xl">check</span>
+                                    1 Target Country
+                                </li>
+<li class="flex items-center gap-3 text-slate-400">
+<span class="material-symbols-outlined text-slate-300 text-xl">close</span>
+                                    Commercial Export License
+                                </li>
+</ul>
+<button class="mt-auto w-full h-12 rounded-full border-2 border-slate-200 dark:border-slate-800 font-bold text-primary dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Get Started</button>
+</div>
+<div class="bg-primary dark:bg-accent-teal/5 border-2 border-accent-teal p-10 rounded-lg flex flex-col gap-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-accent-teal px-4 py-1 text-primary text-xs font-bold uppercase tracking-widest">Most Popular</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-2xl font-bold text-white">Premium</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-white">$49</span>
+<span class="text-slate-400">/mo</span>
+</div>
+<p class="text-slate-400 text-sm">Scalable solution for active exporters.</p>
+</div>
+<ul class="flex flex-col gap-4">
+<li class="flex items-center gap-3 text-slate-100">
+<span class="material-symbols-outlined text-accent-teal text-xl">check</span>
+                                    Unlimited Designs
+                                </li>
+<li class="flex items-center gap-3 text-slate-100">
+<span class="material-symbols-outlined text-accent-teal text-xl">check</span>
+                                    150+ Countries
+                                </li>
+<li class="flex items-center gap-3 text-slate-100">
+<span class="material-symbols-outlined text-accent-teal text-xl">check</span>
+                                    Export-Ready HD Files
+                                </li>
+<li class="flex items-center gap-3 text-slate-100">
+<span class="material-symbols-outlined text-accent-teal text-xl">check</span>
+                                    Legal Compliance Guarantee
+                                </li>
+</ul>
+<button class="mt-auto w-full h-12 rounded-full bg-accent-teal text-primary font-bold hover:opacity-90 transition-opacity">Go Premium</button>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary px-6 lg:px-20 py-16 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 text-slate-400">
+<div class="col-span-2">
+<div class="flex items-center gap-2 text-accent-teal mb-6">
+<span class="material-symbols-outlined text-3xl font-bold">package_2</span>
+<h2 class="text-white text-2xl font-bold tracking-tight">PackMach</h2>
+</div>
+<p class="max-w-sm text-sm leading-relaxed mb-6">
+                            Simplifying international trade with AI-powered packaging design and compliance automation for modern exporters worldwide.
+                        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-slate-800 transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-slate-800 transition-colors" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Product</h4>
+<a class="text-sm hover:text-accent-teal" href="#">AI Generator</a>
+<a class="text-sm hover:text-accent-teal" href="#">Compliance Hub</a>
+<a class="text-sm hover:text-accent-teal" href="#">Templates</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Resources</h4>
+<a class="text-sm hover:text-accent-teal" href="#">Export Guide</a>
+<a class="text-sm hover:text-accent-teal" href="#">API Docs</a>
+<a class="text-sm hover:text-accent-teal" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Legal</h4>
+<a class="text-sm hover:text-accent-teal" href="#">Privacy Policy</a>
+<a class="text-sm hover:text-accent-teal" href="#">Terms of Service</a>
+<a class="text-sm hover:text-accent-teal" href="#">Cookie Policy</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-16 border-t border-slate-800 mt-16 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2024 PackMach AI. All rights reserved.</p>
+<p>Designed for the global export ecosystem.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Regulation Library - Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a111f", // Dark Navy
+                        "accent": "#FF6B35",  // Orange Accent
+                        "background-light": "#F4F7F9",
+                        "status-green": "#10b981",
+                        "status-yellow": "#f59e0b",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"], // Using Space Grotesk as proxy for Clash
+                        "body": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'DM Sans', sans-serif; background-color: #F4F7F9; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+<!-- Top Header -->
+<header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl">library_books</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-primary tracking-tight leading-none">RegLibrary</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Admin Console</p>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-100 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="flex-1 pb-24">
+<!-- Action Area -->
+<div class="px-4 pt-6 pb-2">
+<button class="w-full bg-accent text-white font-bold py-4 rounded-xl shadow-lg shadow-accent/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">upload_file</span>
+                Upload New PDF
+            </button>
+</div>
+<!-- Search & Filter -->
+<div class="px-4 py-4">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-accent text-sm" placeholder="Search regulations, files or regions..." type="text"/>
+</div>
+</div>
+<!-- Tabs -->
+<div class="px-4 mb-6">
+<div class="flex bg-slate-200/50 p-1 rounded-xl">
+<button class="flex-1 py-2.5 text-sm font-bold rounded-lg bg-white text-primary shadow-sm">Coverage</button>
+<button class="flex-1 py-2.5 text-sm font-medium text-slate-500">Files (124)</button>
+</div>
+</div>
+<!-- Coverage Matrix Mobile: Horizontal Grid -->
+<section class="mb-8">
+<div class="px-4 flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-primary">Regional Coverage</h2>
+<a class="text-xs font-bold text-accent uppercase tracking-wider" href="#">View All</a>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 hide-scrollbar">
+<!-- Matrix Card 1 -->
+<div class="min-w-[280px] bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+<div class="flex items-center gap-3 mb-4">
+<img alt="" class="w-8 h-5 object-cover rounded-sm" data-alt="US Flag icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEn_Sn3M-SbZZ02GIKNZbrL1H9EFkZTbrzj1zb0tAtPeZxkJadh3lAahOcPVee-1P5E3CtGwwwKW9HPxm8YAO_7zJgO0jU3MgWea5ISgb4AGfzl1mrY5h5MEFSPqMb3tiLpv8zKdiRbn1fLvypuZCfMgSKUPLFZWCF7T1pCqA9oVvU9R__q45hIARYlHHjotArvvrJkPFG0CW1jBWaVFAJdNck2YEETZbIFg72eYQ3hkppYjrY6ayou5ks1RH5m41pMRc-jg_LbOI"/>
+<div>
+<h3 class="font-bold text-primary leading-none">United States</h3>
+<p class="text-[10px] text-slate-400 mt-1 uppercase font-bold tracking-tighter">North America</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">Data Privacy</span>
+<span class="size-5 flex items-center justify-center bg-green-100 text-green-600 rounded-full">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">AI Governance</span>
+<span class="size-5 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-full">
+<span class="material-symbols-outlined text-[14px] font-bold">priority_high</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">FinTech Regs</span>
+<span class="size-5 flex items-center justify-center bg-slate-100 text-slate-300 rounded-full">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Matrix Card 2 -->
+<div class="min-w-[280px] bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+<div class="flex items-center gap-3 mb-4">
+<img alt="" class="w-8 h-5 object-cover rounded-sm" data-alt="UK Flag icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhYVPM9d9cGgYgbc17UAtggHcvQdtoDztE93vMCU47JLojf5OZyyhMwllCY-wgkOwO3vTmAtvbinkTy_-2esahESEaM9S0GdsnoZlGKj-_LTlhYzPbZ14nDFKa4yb8ALrGWIBXX7-Tr4zRsili1POXNwzV25RFw7vM9cwmJdksRjTdbzVdeG94TqlbPzk8a-6crSJ4-hGwIT08TUVMBiCEMudJ-T88MLn3TexPCVUXz3dssSicGcLPnLfPOMbesitss1p7YU2KG4"/>
+<div>
+<h3 class="font-bold text-primary leading-none">United Kingdom</h3>
+<p class="text-[10px] text-slate-400 mt-1 uppercase font-bold tracking-tighter">Europe</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">Data Privacy</span>
+<span class="size-5 flex items-center justify-center bg-green-100 text-green-600 rounded-full">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">AI Governance</span>
+<span class="size-5 flex items-center justify-center bg-green-100 text-green-600 rounded-full">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">FinTech Regs</span>
+<span class="size-5 flex items-center justify-center bg-green-100 text-green-600 rounded-full">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PDF Management List -->
+<section class="px-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-primary">Recent Documents</h2>
+<button class="text-primary/60">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- PDF Card 1 -->
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="bg-red-50 text-red-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="max-w-[180px]">
+<h4 class="font-bold text-primary text-sm truncate">GDPR_Compliance_2024.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<img alt="" class="w-4 h-3 rounded-[2px]" data-alt="EU Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAZmN_CySxjabUjgCv8iQEqLv5sCthoNBeab4rpXveK_uqXVAb3vU_nWDkcluLtUsaYP9intOdRv0qioKsPKd5iq_toXsQYPmheMC-vdJjr-MqIGVUGLaRqgXlN9UVuhO_9T465QvhZjcmj3aE4vNHKoRrPLMdpNQZHcYCdoQvSm1RNGOOmOF0rFhB_BFit7SuEApeLaKpFsQCsgCJX53mJTAkJ6W95dr3BJlTyRIkUOI598J7vluSJHsetBqLhRyDdoSRIs2jw08"/>
+<span class="text-[10px] text-slate-500 font-medium">European Union</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase">Active</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50">
+<span class="text-[10px] text-slate-400">Added: Oct 12, 2023</span>
+<div class="flex gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg bg-slate-50 text-slate-600">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-lg bg-slate-50 text-red-400">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PDF Card 2 -->
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="bg-red-50 text-red-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="max-w-[180px]">
+<h4 class="font-bold text-primary text-sm truncate">AIGov_Draft_V2_CA.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<img alt="" class="w-4 h-3 rounded-[2px]" data-alt="Canada Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKczyJIxLwfrPcB2Q6TNyIPnsIp9l8Whwg1NNoDGRqlppywibtdX9GZxXKIDs4Tpo47u-b7jMKANaK5UlOcSKutQZSYALdQwJhrTKxc4GS_KOffUjJH1AKatCcYXrcTExHaM1SckzfMZeVsbnlYrkQ9zudRE6usJolwPWsKjKyYcG8NdzPng4rHDbj8l55AIloQUd64EzsvrSBd6AF_Hyj8_EPo89B8j4dnbturpaipv9krrOtuCu4u__S68vLzz4dHlA--lF2oJM"/>
+<span class="text-[10px] text-slate-500 font-medium">Canada</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-yellow-100 text-yellow-700 text-[10px] font-bold rounded-full uppercase">Processing</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50">
+<span class="text-[10px] text-slate-400">Added: Just now</span>
+<div class="flex gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg bg-slate-50 text-slate-600">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-lg bg-slate-50 text-red-400">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PDF Card 3 -->
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="bg-red-50 text-red-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="max-w-[180px]">
+<h4 class="font-bold text-primary text-sm truncate">Fintech_Amendment_2023.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<img alt="" class="w-4 h-3 rounded-[2px]" data-alt="Singapore Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcnkE2UUqf7Bn41eZvMI55d93sdpklZlQ1ZZogxaU8iTJk-zzEK3mGZF7xIK1BW-FmUZ-rdWgflSOA2lQT69pdsh3fe0eqW-sOL7j0lasg7ufTLdI_qoxuzaJAjn3nuqju4OQkww34YaPZ5kAo0zirekqQyefb61XUMj1_CMXICcQYMjEbSapNyjCt2Dtmfkuu8cbqKYG89mD9kw3N5tQvgALo-nDb3pVJluZXgJCW9eoRP1z8jpa5OLbJLHCh5nSxGQKvm-6C_i0"/>
+<span class="text-[10px] text-slate-500 font-medium">Singapore</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase">Active</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50">
+<span class="text-[10px] text-slate-400">Added: Oct 08, 2023</span>
+<div class="flex gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg bg-slate-50 text-slate-600">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-lg bg-slate-50 text-red-400">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-primary text-white/60 px-2 py-3 border-t border-white/10 z-50">
+<div class="flex items-center justify-around">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-white transition-colors">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-white transition-colors">group</span>
+<span class="text-[10px] font-medium">Users</span>
+</a>
+<a class="flex flex-col items-center gap-1 relative" href="#">
+<div class="absolute -top-10 bg-accent text-white p-3 rounded-full shadow-lg shadow-accent/30 border-4 border-primary">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<span class="text-[10px] font-bold text-white mt-8">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-white transition-colors">analytics</span>
+<span class="text-[10px] font-medium">Audit</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-white transition-colors">settings</span>
+<span class="text-[10px] font-medium">Setup</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button for quick upload when scrolling -->
+<button class="fixed bottom-24 right-6 size-14 bg-accent text-white rounded-full shadow-2xl flex items-center justify-center z-40 lg:hidden">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>
